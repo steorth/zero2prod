@@ -1,0 +1,5 @@
+# .cargo/config.toml
+# Siehe Seite 5 von "Zero to Production in Rust".
+# Hiermit verwenden wir den schnelleren Linker des LLVM Projekts
+[target.x86_64-unknown-linux-gnu]
+rustflags = ["-C", "linker=clang", "-C", "link-arg=-fuse-ld=lld"]
